@@ -97,10 +97,10 @@ class publish_report:
                             channel = ''
                             file = pd.read_excel(f'./{ticket}/{files}',sheet_name=0)
                             channel = self.Channels[chan]
+                            data_frame = create_publish_report._data_channel(file,channel,f'AOS-{ticket}')
+                            data_frame.to_excel(writer,sheet_name=channel,index=False,header=True)
                         else:
                             continue
-                    data_frame = create_publish_report._data_channel(file,channel,f'AOS-{ticket}')
-                    data_frame.to_excel(writer,sheet_name=channel,index=False,header=True)
                 print(f'AOS-{ticket} publish report Created')
         return None                
        
