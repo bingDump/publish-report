@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 path = '../PUBLISH REPORT'
-PICs = 'Fadhli'
+PICs = 'Abid'
 submit_date = '3/01/2024'
 success_date = '4/01/2024'
 
